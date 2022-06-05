@@ -1,121 +1,45 @@
 import React from "react";
-
 import Header from "./components/Header";
-// import Products from "./Products";
+import Products from "./pages/Products";
+import Cart from "./pages/Cart";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Testing from "./pages/Testing";
 import './App.css';
+import { Routes, Route } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import { AuthProvider } from "./contexts/AuthContext";
 
 const App = () => {
   return(
-    
-    <div className="Header">
+
+    <main>  
       <Header />
-      <div className="Main">
+      <div className="main">
+        <Routes>
+          <Route path="/" element={<Home />} exact/>
+          <Route path="/products" element={<Products />} exact/>
+          <Route path="/cart" element={<Cart />} exact/> 
+          <Route path="/Login" element={<Login />} exact/>
+          
+          {/* <AuthProvider>  
+          <Container
+            className="d-flex align-items-center justify-content-center"
+            style={{ minHeight: "100vh" }}>
 
-            <div className="empty-space">
-            <br />
-            <br />
-              <div className="Furnica-intro">
-              Furnica is a web application made to help locally independent furniture seller to able to make day end meet.<br />
-              Furnica provide business owners with a place to sell their products. Customers that use Furnica will be protected<br /> 
-              by insurance when furnishes were purchased in a poor quality.
-                
-                <div className="Furnica-Products">
-                  <h2>
-                    Best sellers:
-                  </h2>
-                  <ul>
-                    <li>
-                      <img src="https://m.media-amazon.com/images/I/81r1MGjG9bL._AC_SX466_.jpg" className="furnica-img" />
-                      <h3>Product Name:</h3>
-                      <p>
-                       Price:  
-                      </p>
-                      <p>
-                       Store Name:   
-                      </p>                      
-                      <p>
-                       <button className="button-display">Add to Cart</button>
-                      </p>
-                    </li>
-                    <li>
-                      <img src="https://m.media-amazon.com/images/I/81r1MGjG9bL._AC_SX466_.jpg" className="furnica-img" />
-                      <h3>Product Name:</h3>
-                      <p>
-                       Price:  
-                      </p>
-                      <p>
-                       Store Name:   
-                      </p>
-                      <p>
-                       <button className="button-display">Add to Cart</button>
-                      </p>
-                    </li>
-                    <li>
-                      <img src="https://m.media-amazon.com/images/I/81r1MGjG9bL._AC_SX466_.jpg" className="furnica-img" />
-                      <h3>Product Name:</h3>
-                      <p>
-                       Price:  
-                      </p>
-                      <p>
-                       Store Name:   
-                      </p>
-                      <p>
-                       <button className="button-display">Add to Cart</button>
-                      </p>
-                    </li>
-                    <li>
-                      <img src="https://m.media-amazon.com/images/I/81r1MGjG9bL._AC_SX466_.jpg" className="furnica-img" />
-                      <h3>Product Name:</h3>
-                      <p>
-                       Price:  
-                      </p>
-                      <p>
-                       Store Name:   
-                      </p>
-                      <p>
-                      <button className="button-display">Add to Cart</button>
-                      </p>
-                    </li>
-                    <li>
-                      <img src="https://m.media-amazon.com/images/I/81r1MGjG9bL._AC_SX466_.jpg" className="furnica-img" />
-                      <h3>Product Name:</h3>
-                      <p>
-                       Price:  
-                      </p>
-                      <p>
-                       Store Name:   
-                      </p>
-                      <p>
-                      <button className="button-display">Add to Cart</button>
-                      </p>
-                    </li>
-                    <li>
-                      <img src="https://m.media-amazon.com/images/I/81r1MGjG9bL._AC_SX466_.jpg" className="furnica-img" />
-                      <h3>Product Name:</h3>
-                      <p>
-                       Price:  
-                      </p>
-                      <p>
-                       Store Name:   
-                      </p>
-                      <p>
-                      <button className="button-display">Add to Cart</button>
-                      </p>
-                    </li>
-                  </ul>
-                  <div className="empty-space">
-                    <br />
-
-                      <button className="button-now">
-                        Shop Now!
-                      </button>
-                  
-                  </div>
-                </div>  
-              </div>
-            </div>
+            <a className="w-100" style={{ maxWidth: "400px" }}>
+          */}
+          <Route path="/Signup" element={<Signup />} exact/>
+          {/* </a>
+          </Container>
+          </AuthProvider> */}
+          
+          <Route path="/Testing" element={<Testing />} exact/>
+        </Routes>
+        
       </div>
-  </div>
+    </main>
   );
 };
 

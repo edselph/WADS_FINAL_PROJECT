@@ -27,7 +27,7 @@ const furnitures = [
     {
         name:'Dinner table',
         imageUrl: 'https://m.media-amazon.com/images/I/518zIlKRIpS._SS400_.jpg',
-        description: 'This table are created for eating and drinking.material : full metal with a mat-black finish. Dimensions: 120cm x 80cm x 100cm',
+        description: 'This table are created for eating and drinking. material : full metal with a matte-black finish. Dimensions: 120cm x 80cm x 100cm',
         price: 99 ,
         countInStock: 5 ,
         storeName: 'The furniture store',
@@ -41,9 +41,9 @@ const furnitures = [
         storeName: 'The furniture store',
     },
     {
-        name:'Diner table',
+        name:'Dinner table',
         imageUrl: 'https://res.cloudinary.com/ruparupa-com/image/upload/w_360,h_360,f_auto,q_auto/f_auto,q_auto:eco/v1523915213/Products/X147098_1.jpg',
-        description: 'This table are created for eating and drinking. material : full metal with a mat-black finish. Dimensions: 120cm x 80cm x 100cm',
+        description: 'This table are created for eating and drinking. material : full metal with a matte-black finish. Dimensions: 120cm x 80cm x 100cm',
         price: 190 ,
         countInStock: 4 ,
         storeName: 'EdStore',

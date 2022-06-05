@@ -1,7 +1,10 @@
 import React, {useState} from "react";
 import { AppBar, Tab, Tabs, Toolbar, Typography} from "@mui/material";
-import { BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
-import { FormControl, NavbarBrand } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+
+import Home from "../pages/Home";
+import Products from "../pages/Products";
+import Cart from "../pages/Cart";
 
 const Header =  () => {
     const [value, setValue] = useState();
@@ -13,9 +16,11 @@ const Header =  () => {
                   <img src="https://i.ibb.co/zGZshwK/furnica.png" height="50px" width="50px" />    
                     </Typography>
                     <Tabs textColor="inherit" indicatorColor="secondary" value={value} onChange={(e,val) => setValue(val)}>
-                    <Tab label="Home" />
-                    <Tab label="Products" />
-                    <Tab label="Cart" />
+                      <Tab LinkComponent={NavLink} to="/" label="Home" />
+                      <Tab LinkComponent={NavLink} to="/Products" label="Products" />
+                      <Tab LinkComponent={NavLink} to="/Cart" label="Cart" /> 
+                      <Tab LinkComponent={NavLink} to="/Signup" label="Sign Up" />
+                      <Tab LinkComponent={NavLink} to="/Testing" label="Testing" />
                     </Tabs>
           </Toolbar>
       </AppBar>

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+    const mongoose = require('mongoose');
 
 // this is the inside of products model
 const furnitureSchema = mongoose.Schema({
