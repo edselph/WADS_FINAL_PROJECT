@@ -2,9 +2,6 @@ import React, {useState} from "react";
 import { AppBar, Tab, Tabs, Toolbar, Typography} from "@mui/material";
 import { NavLink } from "react-router-dom";
 
-import Home from "../pages/Home";
-import Products from "../pages/Products";
-import Cart from "../pages/Cart";
 
 const Header =  () => {
     const [value, setValue] = useState();
@@ -17,10 +14,11 @@ const Header =  () => {
                     </Typography>
                     <Tabs textColor="inherit" indicatorColor="secondary" value={value} onChange={(e,val) => setValue(val)}>
                       <Tab LinkComponent={NavLink} to="/" label="Home" />
-                      <Tab LinkComponent={NavLink} to="/Products" label="Products" />
-                      <Tab LinkComponent={NavLink} to="/Cart" label="Cart" /> 
-                      <Tab LinkComponent={NavLink} to="/Signup" label="Sign Up" />
-                      <Tab LinkComponent={NavLink} to="/Testing" label="Testing" />
+                      <Tab LinkComponent={NavLink} to="/products" label="Products" />
+                      <Tab LinkComponent={NavLink} to="/cart" label="Cart" /> 
+                      <Tab LinkComponent={NavLink} to="/login" label="Login" />
+                      <Tab LinkComponent={NavLink} to="/testing" label="Testing" />
+                      <Tab LinkComponent={NavLink} to="/account" label="Account" />
                     </Tabs>
           </Toolbar>
       </AppBar>
