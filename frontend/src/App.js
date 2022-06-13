@@ -5,37 +5,38 @@ import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Testing from "./pages/Testing";
 import Account from "./pages/Account";
-import './App.css';
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
-import ProtectedRoute  from "./components/ProtectedRoute";
-
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
-  return(
-
+  return (
     <main>
       <Header />
       <div className="main">
-      <AuthContextProvider>
-        <Routes>  
-          <Route path="/" element={<Home />} exact/>
-          <Route path="/products" element={<Products />} exact/>
-          <Route path="/cart" element={<Cart />} exact/> 
-          <Route path="/login" element={<Login />} exact/>
-          <Route path="/signup" element={<Signup />} exact/>  
-          <Route path="/testing" element={<Testing />} exact/>
-          <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} exact/>
-        </Routes>
-      </AuthContextProvider>
+        <AuthContextProvider>
+          <Routes>
+            <Route path="/" element={<Home />} exact />
+            <Route path="/products" element={<Products />} exact />
+            {/* <Route path="/cart" element={<Cart />} exact /> */}
+            <Route path="/login" element={<Login />} exact />
+            <Route path="/signup" element={<Signup />} exact />
+            <Route
+              path="/account"
+              element={
+                <ProtectedRoute>
+                  <Account />
+                </ProtectedRoute>
+              }
+              exact
+            />
+          </Routes>
+        </AuthContextProvider>
       </div>
     </main>
-
-
   );
 };
 
-
-export default App
+export default App;
