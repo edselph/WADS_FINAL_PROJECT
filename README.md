@@ -1,6 +1,6 @@
 ## FURNICA
 This is final Project of WADS
-  Furnica is a webApp that are made to help local indonesia business to thrive.
+  Furnica is a webApp that are made to help local indonesia business to thrive. By helping local businesses to sell thier product to local customer so that they can make ends meet.
 
 Group :
 
